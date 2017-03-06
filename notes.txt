@@ -1,0 +1,44 @@
+package: golang-go
+Go has interfaces, but types are not inherited.
+Go in compiled and statically typed.
+The go tool can run a file without precompiling.
+Compiled executables are OS specific.
+Applications have a statically lined runtime.
+No external virtual machine is needed.
+
+Go has some object-oriented features:
+  - you can define custom interfaces
+  - custom types can implement one or more interfaces
+  - custom types can have member methods
+  - custom structs (data structures) can have member fields.
+
+What Go doesn't support:
+  - type inheritance (no subclasses)
+  - method or operator overloading
+  - structured exception handling
+  - implicit numeric conversions
+
+Go was designed as a next-gen languago for C.
+Go borrows some syntax from C.
+Go tries to reduce the amount of typing.
+
+Go is case-sensitive.
+Variable and package names are lower and mixed case.
+Exported functions and fields have initial upper-case character.
+Line feed ends a statement, no semicolons needed.
+Lexer adds the semicolons as needed (when statement is completed and linefeed exists).
+
+Code blocks are wrapped with braces {}, start brace on the same line as the statement.
+Parenthesis aren't always used like in Java for example.
+Go has a set of built-in functions that are always available without importing.
+These are available via builtins, like len(string), panic(error) and recover().
+
+Golang.org has documentation, playground and downloads.
+To run go playground from localhost (first install golang-go.tools):
+godoc -http=:6860 -play -index
+It still uses go backend server to run it, not your localhost, so Internet access is needed. 
+Limitation of playground: can't host web applications and can't access other hosts. It also fakes the filesystem, so the changes are temporary and can't do everything. The date and time are always the same (nov 10, 2009, 11pm) - when Go was first announced.
+You can run only one Go source file at a time in playground, so can't create code libraries or packages.
+
+The main file always starts with package main.
+
