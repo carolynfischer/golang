@@ -42,3 +42,88 @@ You can run only one Go source file at a time in playground, so can't create cod
 
 The main file always starts with package main.
 
+Go mandatory workspace subdirectories:
+ - src (ource)
+ - bin (binaries)
+ - pkg (package objects)
+$GOPATH sets the environment. 
+The package directory is under src. For example scr/palindrome would crete a package named palindrome.
+Package names should be all lowercase and a single word.
+https://blog.golang.org/package_names
+set GOOS="darwin" would create a mac package on a different platform than mac.
+Every variable that is declared, must be used.
+fmt.Printf does not add the linefeed automatically, whereas Println does.
+fmt.Scanln automatically breaks up input with space characters.
+strings.TrimSpace(str) to trim the linefeed from input.
+strconv.ParseFloat(str, 64) to convert a string to a float.
+
+Go is a statically typed language. All variables have assigned types. 
+You can set types either explicitly or implicitly.
+To set a type explicitly: use keyword var and = assignment operator.
+Setting initial value is optional. 
+var anInteger int = 42
+var aString string = "This is Go!"
+Implicit declaration with := :
+anInteger := 42
+aString := "This is Go!"
+
+You can use constants in Go, explicitly or implicitly.
+Explicit: const anInteger int = 42 (no colon)
+Implicit: const aString = "This is Go!"
+
+Predeclared Boolean and String types (all lowercase and single word):
+bool
+string
+
+Fixed integer types: 
+uint8 uint16 uint32 uint64
+int8 int16 int32 int64
+
+Aliases:
+byte
+uint
+int
+uintptr
+
+Floating values:
+float32
+float64
+
+Complex numbers:
+complex64
+complex128
+
+Data collections:
+Arrays
+Slices
+Maps
+Structs
+
+Language organization:
+Functions
+Interfaces
+Channels
+
+Data management:
+Pointers
+
+Arithmetic Operators:
+Go supports all math operators used in C:
++ sum
+- difference
+* product
+/ quotient
+% remainder
+& bitwise AND
+| bitwise OR
+^ bitwise XOR
+&^ bit clear
+<< left shift
+>> right shift
+Numeric types don't implicitly convert.
+Example: you can't add an int to a float. Convert types before using.
+
+Date and time are managed by the time package.
+t := time.Date(2009, time.November, 10, 23, 0, 0, 0, time.UTC)
+fmt.Printf("Go launched at %s\n", t) 
+
